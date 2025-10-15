@@ -14,6 +14,13 @@ body {
     background: white; /* Белый фон для основного содержимого */
     min-height: 100vh; /* Минимальная высота равна высоте окна браузера */
     box-shadow: 0 0 30px rgba(0,0,0,0.1); /* Легкая тень вокруг всего контента */
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
 }
 /* ===== ШАПКА ===== */
 .header {
@@ -24,11 +31,13 @@ body {
     font-size: 28px; /* Размер шрифта */
     font-weight: 300; /* Легкое начертание шрифта */
     letter-spacing: 2px; /* Расстояние между буквами */
+    grid-area: header;
 }
 /* ===== НАВИГАЦИЯ ===== */
 .nav {
     background: #2c3e50; /* Темно-синий фон навигации */
     padding: 20px 0; /* Вертикальные отступы */
+    grid-area: nav;
 }
 .nav-list {
     list-style: none; /* Убираем маркеры списка */
@@ -54,10 +63,11 @@ body {
     transform: translateY(-2px); /* Легкое поднятие элемента при наведении */
 }
 /* ===== ОСНОВНОЙ КОНТЕНТ ===== */
-.content {
+main.content {
     padding: 40px; /* Внутренние отступы контента */
     max-width: 900px; /* Максимальная ширина контента */
     margin: 0 auto; /* Центрирование контента */
+    grid-area: main;
 }
 /* ===== ГЛАВНАЯ СТРАНИЦА ===== */
 .profile-header {
@@ -107,6 +117,12 @@ body {
     gap: 15px; /* Расстояние между навыками */
     margin: 30px 0; /* Вертикальные отступы */
 }
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20;
+}
 .skill-tag {
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); /* Голубой
     градиентный фон */
@@ -132,6 +148,11 @@ body {
     text-align: center; /* Выравнивание по центру */
     margin-bottom: 30px; /* Отступ снизу */
     font-weight: 300; /* Легкое начертание шрифта */
+}
+.experience-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    gap: 20px;
 }
 .experience-card {
     background: white; /* Белый фон карточки */
@@ -166,6 +187,12 @@ body {
     margin-top: 50px; /* Отступ сверху */
 }
 /* ===== СТИЛИ ДЛЯ ТОВАРОВ ===== */
+.goods-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 3;
+}
 .goods {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -284,4 +311,19 @@ body {
     text-decoration: none;
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+@media(max-width: 768px){
+    .nav-list{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .skills-grid{
+        grid-template-columns: 1fr;
+    }
+    .experience-grid{
+        grid-template-columns: 1fr;
+    }
+    main.content{
+        padding: 20px;
+    }
 }

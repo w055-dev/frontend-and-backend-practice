@@ -8,53 +8,61 @@
     </head>
     <body>
         <div class="page-container">
-            <div class="header">Хэдер</div>
+            <header class="header">Хэдер</header>
             <div class="nav">
-                <ul class="nav-list">
+                <nav class="nav-list">
                     <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
                     <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
-                </ul>
+                </nav>
             </div>
-            <div class="content">
-                <div class="profile-header">
+            <main class="content">
+                <article class="profile-header">
                     <h1 class="profile-title">Информация об авторе</h1>
                     <img class="profile-photo" src="images/photo.png" alt="Фото автора">
                     <h2 class="profile-name">Колдаев Тимур Саврович</h2>
                     <p class="profile-group">ЭФБО-02-24</p>
-                    <div class="about-me">
-                        <p>Обо мне:...</p>
-                    </div>
-                    <div class="skills-container">
-                        <div class="skill-tag">Навык 1</div>
-                        <div class="skill-tag">Навык 2</div>
-                        <div class="skill-tag">Навык 3</div>
-                        <div class="skill-tag">Навык 4</div>
-                    </div>
-                    <div class="experience-section">
+                    <section class="about-me">
+                        <h2>Обо мне</h2>
+                        <p>Обо мне: Code.Sleep.Repeat.(И сессия где-то между)</p>
+                    </section>
+                    <section class="skills-container">
+                        <h2>Мои навыки</h2> 
+                        <div class="skills-grid">
+                            <div class="skill-tag"> Превращаю простые задачи в эпичные многочасовые квесты</div>
+                            <div class="skill-tag">Профессионально откладываю до последнего</div>
+                            <div class="skill-tag">Виртуозно объясняю провалы философией «Это не баг, это фича»</div>
+                            <div class="skill-tag">Создаю впечатление, что у меня всё под контролем, пока Google не зависнет</div>
+                        </div>
+                    </section>
+                    <section class="experience-section">
                         <h2 class="section-title">Мой опыт работы</h2>
-                        <div class="experience-card">
-                            <h3 class="experience-title">Опыт 1</h3>
-                            <p class="experience-desc">Не придумал...</p>
+                        <div class="experience-grid">
+                            <article class="experience-card">
+                                <h3 class="experience-title">Опыт 1</h3>
+                                <p class="experience-desc">HTML</p>
+                            </article>
+                            <article class="experience-card">
+                                <h3 class="experience-title">Опыт 2</h3>
+                                <p class="experience-desc">CSS</p>
+                            </article>
+                            <article class="experience-card">
+                                <h3 class="experience-title">Опыт 3</h3>
+                                <p class="experience-desc">JS</p>
+                            </article>
+                            <article class="experience-card">
+                                <h3 class="experience-title">Опыт 4</h3>
+                                <p class="experience-desc">C++</p>
+                            </article>
                         </div>
-                        <div class="experience-card">
-                            <h3 class="experience-title">Опыт 2</h3>
-                            <p class="experience-desc">Еще в размышлениях...</p>
-                        </div>
-                        <div class="experience-card">
-                            <h3 class="experience-title">Опыт 3</h3>
-                            <p class="experience-desc">В процессе...</p>
-                        </div>
-                        <div class="experience-card">
-                            <h3 class="experience-title">Опыт 4</h3>
-                            <p class="experience-desc">Это разве кто-то прочитает?</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer">Футер</div>
+                    </section>
+                </article>
+            </main>
+            <footer class="footer">
+                <p>Футер</p>
+            </footer>
         </div>
     </body>
 </html>
