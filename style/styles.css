@@ -188,18 +188,21 @@ body {
 /* ===== СТИЛИ ДЛЯ ТОВАРОВ ===== */
 .goods-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin-top: 3;
+    margin-top: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.goods {
+/* .goods {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
-}
+} */
 .good {
     background: white;
     border-radius: 15px;
@@ -237,7 +240,6 @@ body {
     padding: 40px 20px;
     background: white;
     margin-bottom: 25px;
-    border-radius: 8px;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -331,5 +333,50 @@ body {
     }
     main.content{
         padding: 20px;
+    }
+    .profile-photo{
+        width: 180px;
+        height: 230px;
+    }
+    .goods-grid{
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding:15px;
+        margin: 0 10px;
+    }
+    .good{
+        min-width: 0;
+    }
+    .news-block{
+        margin: 0 20px 20px 20px;
+        padding: 20px 15px;
+    }
+    .news-block .news-header{
+        font-size: 18px;
+        padding: 15px;
+    }
+    .news-block .news-meta{
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+    .news-block .news-text{
+        padding: 15px;
+        font-size: 15px;
+    }
+    .contacts{
+        margin:30px auto;
+        padding: 30px;
+        max-width: 90%;
+    }
+    .contact-line{
+        font-size: 16px;
+        margin-bottom: 20px;
+        padding: 8px 0;
+    }
+    .call-button{
+        width: 100%;
+        max-width: 250px;
+        font-size: 15px;
+        padding: 10px 20px;
     }
 }
