@@ -373,7 +373,7 @@ dialog{
     animation: slideIn 0.3s ease;
     max-width: 500px;
     width: 90vw;
-    max-height: 90vw;
+    max-height: 90vh;
     overflow-y: auto;
 }
 .modal-header{
@@ -392,7 +392,7 @@ dialog{
     padding: 1.5rem;
 }
 .form-group{
-    padding: 1rem;
+    padding: 1rem 0;
     margin-bottom: 0.5rem;
 }
 .form-group label{
