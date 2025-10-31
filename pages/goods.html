@@ -1,46 +1,70 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
-    <link rel="stylesheet" href="../style/styles.css">
-</head>
-<body>
-    <div class="page-container">
-        <header class="header">Товары</header>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-        <main class="content">
-            <h1 class="profile-title">Каталог товаров</h1>
-            <article class="goods-grid">
-                <div class="good">
-                    <img src="../images/ochki.jpg">
-                    <h3>Офисные очки</h3>
-                    <p>499 рублей</p>
-                </div>
-                <div class="good">
-                    <img src="../images/shlyapa.jpg">
-                    <h3>Стильная шляпа</h3>
-                    <p>799 рублей</p>
-                </div>
-                <div class="good">
-                    <img src="../images/trubka.jpg">
-                    <h3>Трубка детектива</h3>
-                    <p>999 рублей</p>
-                </div>
-            </article>
-        </main>
-        <footer class="footer">
-                <p>Футер<p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Товары - Портфолио</title>
+        <link rel="stylesheet" href="../style/styles.css">
+    </head>
+    <body>
+        <div class="page">
+            <header class="header">
+                <h1 class="header__title">Товары</h1>
+                <button class="header__theme-toggle theme-toggle" id="themeToggle" aria-label="Переключить тему"><span class="theme-toggle__icon">🌙</span></button>
+            </header>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                    <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
+                    <li class="nav__item nav__item--active"><a class="nav__link" href="goods.html">Товары</a></li>
+                    <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <main class="main">
+                <section class="goods">
+                    <h2 class="goods__title">Каталог товаров</h2>
+                        <div class="goods__grid">
+                            <article class="card">
+                                <img class="card__image" src="../images/ochki.jpg" alt="Офисные очки">
+                                <div class="card__content">
+                                    <h3 class="card__title">Офисные очки</h3>
+                                    <p class="card__description">Удобные очки для комфортной работы за компьютером</p>
+                                    <div class="card__price">499 рублей</div>
+                                    <button class="card__button button button--primary card__button--add" onclick="addToCart('Офисные очки', 499)">В корзину</button>
+                                </div>
+                            </article>
+                            <article class="card card--discount card--hover">
+                                <div class="card__badge card__badge--discount">-20%</div>
+                                <img class="card__image" src="../images/shlyapa.jpg" alt="Стильная щляпа"> 
+                                <h3 class="card__title">Стильная шляпа</h3>
+                                <p class="card__description">Элегантная шляпа для завершения образа</p>
+                                <div class="card__price">
+                                    <span class="card__price-old">999 рублей</span>
+                                    <span class="card__price-new">799 рублей</span>
+                                </div>
+                                <button class="card__button button button--primary card__button--add" onclick="addToCart('Стильная шляпа', 799)">В корзину</button>
+                            </article>
+                            <article class="card card--selected">
+                                <div class="card__badge card__badge--selected">Выбрано</div>
+                                <img class="card__image" src="../images/trubka.jpg" alt="Трубка детектива">
+                                <h3 class="card__title">Трубка детектива</h3>
+                                <p class="card__description">Классическая трубка для настоящих ценителей</p>
+                                <div class="card__price">999 рублей</div>
+                                <button class="card__button button button--primary card__button--add" onclick="addToCart('Трубка детектива', 999)">В корзину</button>
+                            </article>
+                        </div>
+                </section>
+            </main>
+            <footer class="footer">
+                    <p class="footer__text">&copy; 2025 Мой сайт</p>
             </footer>
-    </div>
-</body>
+        </div>
+        <script src="../js/theme.js"></script>
+        <script>
+        function addToCart(productName, price) {
+            alert(`Товар "${productName}" добавлен в корзину за ${price} ₽`);
+        }
+    </script>
+    </body>
 </html>

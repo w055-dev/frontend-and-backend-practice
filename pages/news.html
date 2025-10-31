@@ -3,45 +3,51 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
+        <title>Новости - Портфолио</title>
         <link rel="stylesheet" href="../style/styles.css">
     </head>
     <body>
-        <div class="page-container">
-            <header class="header">Новости</header>
+        <div class="page">
+            <header class="header">
+                <h1 class="header__title">Новости</h1>
+                <button class="header__theme-toggle theme-toggle" id="themeToggle" aria-label="Переключить тему"><span class="theme-toggle__icon">🌙</span></button>
+            </header>
             <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                    <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                    <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                    <li class="nav__item nav__item--active"><a class="nav__link" href="news.html">Новости</a></li>
+                    <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
+                    <li class="nav__item"><a class="nav__link" href="goods.html">Товары</a></li>
+                    <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
-            <main class="content">
-                <h1 class="profile-title">Последние новости</h1>
-                <div class="news-table-container">
-                    <div class="news-block">
-                        <div class="news-header"> Загадка «Призрачного библиофила»</div>
-                        <div class="news-meta">24.09.2025 12:00 Т.С.Колдаев</div>
-                        <div class="news-text">В городской библиотеке произошло загадочное ограбление: неизвестный похитил редкий фолиант XVIII века, оставив на его месте идеально сложенный оригами-журавля. Камеры наблюдения зафиксировали лишь размытую тень, а система сигнализации не сработала. Полиция предполагает, что имеет дело с высокоинтеллектуальным преступником, бросающим вызов правоохранительным органам.</div>
-                    </div>
-                    <div class="news-block">
-                        <div class="news-header">Ограбление века в парке развлечений</div>
-                        <div class="news-meta">27.09.2025 18:10 Ш.Х.Холмс</div>
-                        <div class="news-text">На закрытом на зимний сезон колесе обозрения было совершено дерзкое ограбление инкассаторской машины. Преступник проник на территорию, используя аттракционы как маршрут, и скрылся, не оставив следов. Единственной уликой стала забытая на месте преступления перчатка с вышитой на внутренней стороне загадочной монограммой в виде латинской буквы «V».</div>
-                    </div>
-                    <div class="news-block">
-                        <div class="news-header">Дело о «говорящем» портрете</div>
-                        <div class="news-meta">30.09.2025 23:59 Д.Х.Ватсон</div>
-                        <div class="news-text">Из частной галереи похищен портрет викторианской эпохи, при этом рамка от картины осталась нетронутой. Владелец утверждает, что за неделю до кражи слышал ночью из зала тихий шепот. Детективы обнаружили под подкладкой рамки записку: «Истина не в красках, а в тенях». Расследование осложняется тем, что все свидетели дают противоречивые показания об увиденном.</div>
+            <main class="main">
+                <h1 class="news__title">Последние новости</h1>
+                <div class="news__content">
+                    <div class="news__list">
+                        <article class="news__item">
+                            <header class="news__item-header"> Загадка «Призрачного библиофила»</header>
+                            <div class="news__item-meta">24.09.2025 12:00 Т.С.Колдаев</div>
+                            <div class="news__item-text">В городской библиотеке произошло загадочное ограбление: неизвестный похитил редкий фолиант XVIII века, оставив на его месте идеально сложенный оригами-журавля. Камеры наблюдения зафиксировали лишь размытую тень, а система сигнализации не сработала. Полиция предполагает, что имеет дело с высокоинтеллектуальным преступником, бросающим вызов правоохранительным органам.</div>
+                        </article>
+                        <article class="news__item">
+                            <header class="news__item-header">Ограбление века в парке развлечений</header>
+                            <div class="news__item-meta">27.09.2025 18:10 Ш.Х.Холмс</div>
+                            <div class="news__item-text">На закрытом на зимний сезон колесе обозрения было совершено дерзкое ограбление инкассаторской машины. Преступник проник на территорию, используя аттракционы как маршрут, и скрылся, не оставив следов. Единственной уликой стала забытая на месте преступления перчатка с вышитой на внутренней стороне загадочной монограммой в виде латинской буквы «V».</div>
+                        </article>
+                        <article class="news__item">
+                            <header class="news__item-header">Дело о «говорящем» портрете</header>
+                            <div class="news__item-meta">30.09.2025 23:59 Д.Х.Ватсон</div>
+                            <div class="news__item-text">Из частной галереи похищен портрет викторианской эпохи, при этом рамка от картины осталась нетронутой. Владелец утверждает, что за неделю до кражи слышал ночью из зала тихий шепот. Детективы обнаружили под подкладкой рамки записку: «Истина не в красках, а в тенях». Расследование осложняется тем, что все свидетели дают противоречивые показания об увиденном.</div>
+                        </article>
                     </div>
                 </div>
             </main>
             <footer class="footer">
-                <p>Футер</p>
+                <p class="footer__text">&copy; 2025 Мой сайт</p>
             </footer>
         </div>
+        <script src="../js/theme.js"></script>
     </body>
 </html>
     

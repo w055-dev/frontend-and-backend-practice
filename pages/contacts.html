@@ -1,146 +1,148 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - Семестровая работа</title>
-    <link rel="stylesheet" href="../style/styles.css">
-</head>
-<body>
-    <div class="page-container">
-        <header class="header">Контакты</header>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-        <main class="content">
-            <section class="contacts-container">
-                <h2 class="section-title">Наши контакты</h2>
-                <article class="contact-info">
-                    <h3>Электронная почта</h3>
-                    <p>Адрес электронной почты: abcabc@mirea.ru</p>
-                </article>
-                <article class="contact-info">
-                    <h3>Физический адрес</h3>
-                    <p>Адрес: г. Лондон, ул. Бейкер-стрит, д. 221Б</p>
-                </article>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <h3>Телефон</h3>
-                        <p>+79999999999</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Время работы</h3>
-                        <p>Пн-Пт: 9:00-19:30</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Социальные сети</h3>
-                        <p>Telegram, Instagram, WhatsApp</p>
-                    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Контакты - Портфолио</title>
+        <link rel="stylesheet" href="../style/styles.css">
+    </head>
+    <body>
+        <div class="page">
+            <header class="header">
+            <h1 class="header__title">Контакты</h1>
+            <button class="header__theme-toggle theme-toggle" id="themeToggle" aria-label="Переключить тему"><span class="theme-toggle__icon">🌙</span></button>
+            </header>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                    <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
+                    <li class="nav__item "><a class="nav__link" href="goods.html">Товары</a></li>
+                    <li class="nav__item nav__item--active"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <main class="main">
+                <section class="contacts">
+                    <h2 class="contacts__title">Наши контакты</h2>
+                        <article class="contacts__info">
+                            <h3 class="contacts__item-title">Электронная почта</h3>
+                            <p class="contacts__item-value">Адрес электронной почты: abcabc@mirea.ru</p>
+                        </article>
+                        <article class="contacts__info">
+                            <h3 class="contacts__item-title">Физический адрес</h3>
+                            <p class="contacts__item-value">Адрес: г. Лондон, ул. Бейкер-стрит, д. 221Б</p>
+                        </article>
+                        <div class="contacts__item">
+                            <h3 class="contacts__item-title">Телефон</h3>
+                            <p class="contacts__item-value">+79999999999</p>
+                        </div>
+                        <div class="contacts__item">
+                            <h3 class="contacts__item-title">Время работы</h3>
+                            <p class="contacts__item-value">Пн-Пт: 9:00-19:30</p>
+                        </div>
+                        <div class="contacts__item">
+                            <h3 class="contacts__item-title">Социальные сети</h3>
+                            <p class="contacts__item-value">Telegram, Instagram, WhatsApp</p>
+                        </div>
+                    <button class="contacts__button" onclick="contactModal.showModal()">Связаться с нами</button>
+                </section>
+            </main>
+            <footer class="footer">
+                    <p class="footer__text">&copy; 2025 Мой сайт</p>
+            </footer>
+
+            <dialog id="contactModal" class="modal">
+                <div class="modal__header">
+                    <h2>Форма обратной связи</h2>
                 </div>
-                <button class="contact-button" onclick="contactModal.showModal()">Связаться с нами</button>
-            </section>
-        </main>
-        <footer class="footer">
-            <p>© 2024 Все права защищены. Контактная информация</p>
-        </footer>
+                <div class="modal__content">
+                    <form id="feedbackForm" method="dialog">
+                        <div class="modal__form-group">
+                            <label for="name" class="modal__label">Имя<span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="Введите ваше имя" class="modal__input">
+                        </div>
+                        <div class="modal__form-group">
+                            <label for="phone" class="modal__label">Телефон<span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX" class="modal__input">
+                        </div>
+                        <div class="modal__form-group">
+                            <label for="email" class="modal__label">Электронная почта<span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="example@mail.ru" class="modal__input">
+                        </div>
+                        <div class="modal__form-group">
+                            <label for="category" class="modal__label">Категория обращения<span class="required">*</span></label>
+                            <select id="category" name="category" required class="modal__select">
+                                <option value="">Выберите категорию</option>
+                                <option value="technical">Техническая поддержка</option>
+                                <option value="commercial">Коммерческое предложение</option>
+                                <option value="cooperation">Сотрудничество</option>
+                                <option value="complaint">Жалоба</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        <div class="modal__form-group">
+                            <label for="message" class="modal__label">Текст обращения<span class="required">*</span></label>
+                            <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..." class="modal__textarea"></textarea>
+                        </div>
+                        <div class="modal__actions">
+                            <button type="button" class="button button--secondary" onclick="contactModal.close()">Отмена</button>
+                            <button type="button" class="button button--primary" onclick="submitForm()">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </dialog>
+        </div>
 
-        <dialog id="contactModal">
-            <div class="modal-header">
-                <h2>Форма обратной связи</h2>
-            </div>
-            <div class="modal-content">
-                <form id="feedbackForm" method="dialog">
-                    <div class="form-group">
-                        <label for="name">Имя<span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Телефон<span class="required">*</span></label>
-                        <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Электронная почта<span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required placeholder="example@mail.ru">
-                    </div>
-                    <div class="form-group">
-                        <label for="category">Категория обращения<span class="required">*</span></label>
-                        <select id="category" name="category" required>
-                            <option value="">Выберите категорию</option>
-                            <option value="technical">Техническая поддержка</option>
-                            <option value="commercial">Коммерческое предложение</option>
-                            <option value="cooperation">Сотрудничество</option>
-                            <option value="complaint">Жалоба</option>
-                            <option value="suggestion">Предложение</option>
-                            <option value="other">Другое</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Текст обращения<span class="required">*</span></label>
-                        <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
-                    </div>
-                    <div class="modal-actions">
-                        <button type="button" class="btn btn-secondary" onclick="contactModal.close()">Отмена</button>
-                        <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
-                    </div>
-                </form>
-            </div>
-        </dialog>
-    </div>
+        <script>
+            const contactModal = document.getElementById('contactModal');
+            
+            function submitForm() {
+                const form = document.getElementById('feedbackForm');
+                const formData = new FormData(form);
 
-    <script>
-        const contactModal = document.getElementById('contactModal');
-        
-        function submitForm() {
-            const form = document.getElementById('feedbackForm');
-            const formData = new FormData(form);
+                // Простая валидация
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
 
-            // Простая валидация
-            if (!form.checkValidity()) {
-                form.reportValidity();
-                return;
+                // Собираем данные формы
+                const data = {
+                    name: formData.get('name'),
+                    phone: formData.get('phone'),
+                    email: formData.get('email'),
+                    category: formData.get('category'),
+                    message: formData.get('message')
+                };
+
+                // В реальном приложении здесь был бы AJAX-запрос
+                console.log('Данные формы:', data);
+                
+                // Показываем уведомление об успешной отправке
+                alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
+                
+                // Закрываем модальное окно
+                contactModal.close();
+                
+                // Очищаем форму
+                form.reset();
             }
 
-            // Собираем данные формы
-            const data = {
-                name: formData.get('name'),
-                phone: formData.get('phone'),
-                email: formData.get('email'),
-                category: formData.get('category'),
-                message: formData.get('message')
-            };
+            // Закрытие модального окна при клике на фон
+            contactModal.addEventListener('click', function(event) {
+                if (event.target === this) {
+                    this.close();
+                }
+            });
 
-            // В реальном приложении здесь был бы AJAX-запрос
-            console.log('Данные формы:', data);
-            
-            // Показываем уведомление об успешной отправке
-            alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
-            
-            // Закрываем модальное окно
-            contactModal.close();
-            
-            // Очищаем форму
-            form.reset();
-        }
-
-        // Закрытие модального окна при клике на фон
-        contactModal.addEventListener('click', function(event) {
-            if (event.target === this) {
-                this.close();
-            }
-        });
-
-        // Предотвращение отправки формы по Enter (кроме textarea)
-        document.getElementById('feedbackForm').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter' && event.target.type !== 'textarea') {
-                event.preventDefault();
-            }
-        });
-    </script>
-</body>
+            // Предотвращение отправки формы по Enter (кроме textarea)
+            document.getElementById('feedbackForm').addEventListener('keypress', function(event) {
+                if (event.key === 'Enter' && event.target.type !== 'textarea') {
+                    event.preventDefault();
+                }
+            });
+        </script>
+        <script src="../js/theme.js"></script>
+    </body>
 </html>
