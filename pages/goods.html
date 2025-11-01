@@ -1,70 +1,170 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Товары - Портфолио</title>
-        <link rel="stylesheet" href="../style/styles.css">
-    </head>
-    <body>
-        <div class="page">
-            <header class="header">
-                <h1 class="header__title">Товары</h1>
-                <button class="header__theme-toggle theme-toggle" id="themeToggle" aria-label="Переключить тему"><span class="theme-toggle__icon">🌙</span></button>
-            </header>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
-                    <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
-                    <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
-                    <li class="nav__item nav__item--active"><a class="nav__link" href="goods.html">Товары</a></li>
-                    <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
-                </ul>
-            </nav>
-            <main class="main">
-                <section class="goods">
-                    <h2 class="goods__title">Каталог товаров</h2>
-                        <div class="goods__grid">
-                            <article class="card">
-                                <img class="card__image" src="../images/ochki.jpg" alt="Офисные очки">
-                                <div class="card__content">
-                                    <h3 class="card__title">Офисные очки</h3>
-                                    <p class="card__description">Удобные очки для комфортной работы за компьютером</p>
-                                    <div class="card__price">499 рублей</div>
-                                    <button class="card__button button button--primary card__button--add" onclick="addToCart('Офисные очки', 499)">В корзину</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары - Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1">Товары</h1>
+                        <p class="mb-0 opacity-75">Каталог продукции</p>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">ЭФБО-02-24</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">
+                                <i class="bi bi-newspaper me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="practices.html">
+                                <i class="bi bi-code-slash me-1"></i>Практики
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="goods.html">
+                                <i class="bi bi-cart me-1"></i>Товары
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="container my-4">
+            <section class="mb-5">
+                <h2 class="h3 text-center mb-4">Каталог товаров</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm" id="product-1">
+                            <img src="../images/ochki.jpg" class="card-img-top" alt="Офисные очки" style="height: 250px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Офисные очки</h5>
+                                <p class="card-text text-muted">Удобные очки для комфортной работы за компьютером</p>
+                                <div class="mt-auto">
+                                    <div class="h5 text-primary mb-3">499 ₽</div>
+                                    <button class="btn btn-primary w-100" onclick="addToCart('Офисные очки', 499, 'product-1')">
+                                        В корзину
+                                    </button>
                                 </div>
-                            </article>
-                            <article class="card card--discount card--hover">
-                                <div class="card__badge card__badge--discount">-20%</div>
-                                <img class="card__image" src="../images/shlyapa.jpg" alt="Стильная щляпа"> 
-                                <h3 class="card__title">Стильная шляпа</h3>
-                                <p class="card__description">Элегантная шляпа для завершения образа</p>
-                                <div class="card__price">
-                                    <span class="card__price-old">999 рублей</span>
-                                    <span class="card__price-new">799 рублей</span>
-                                </div>
-                                <button class="card__button button button--primary card__button--add" onclick="addToCart('Стильная шляпа', 799)">В корзину</button>
-                            </article>
-                            <article class="card card--selected">
-                                <div class="card__badge card__badge--selected">Выбрано</div>
-                                <img class="card__image" src="../images/trubka.jpg" alt="Трубка детектива">
-                                <h3 class="card__title">Трубка детектива</h3>
-                                <p class="card__description">Классическая трубка для настоящих ценителей</p>
-                                <div class="card__price">999 рублей</div>
-                                <button class="card__button button button--primary card__button--add" onclick="addToCart('Трубка детектива', 999)">В корзину</button>
-                            </article>
+                            </div>
                         </div>
-                </section>
-            </main>
-            <footer class="footer">
-                    <p class="footer__text">&copy; 2025 Мой сайт</p>
-            </footer>
-        </div>
-        <script src="../js/theme.js"></script>
-        <script>
-        function addToCart(productName, price) {
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-danger" id="product-2">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2">-20%</span>
+                            <img src="../images/shlyapa.jpg" class="card-img-top" alt="Стильная шляпа" style="height: 250px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Стильная шляпа</h5>
+                                <p class="card-text text-muted">Элегантная шляпа для завершения образа</p>
+                                <div class="mt-auto">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="text-decoration-line-through text-muted me-2">999 ₽</span>
+                                        <span class="h5 text-danger mb-0">799 ₽</span>
+                                    </div>
+                                    <button class="btn btn-primary w-100" onclick="addToCart('Стильная шляпа', 799, 'product-2')">
+                                        В корзину
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm" id="product-3">
+                            <img src="../images/trubka.jpg" class="card-img-top" alt="Трубка детектива" style="height: 250px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Трубка детектива</h5>
+                                <p class="card-text text-muted">Классическая трубка для настоящих ценителей</p>
+                                <div class="mt-auto">
+                                    <div class="h5 text-primary mb-3">999 ₽</div>
+                                    <button class="btn btn-primary w-100" onclick="addToCart('Трубка детектива', 999, 'product-3')">
+                                        В корзину
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 Портфолио студента. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const selectedProducts = new Set();
+        function addToCart(productName, price, productId) {
+            selectedProducts.add(productId);
+            updateProductCard(productId);
+            
             alert(`Товар "${productName}" добавлен в корзину за ${price} ₽`);
         }
+        function updateProductCard(productId) {
+            const productCard = document.getElementById(productId);
+            if (selectedProducts.has(productId)) {
+                productCard.classList.add('border-warning');
+                let badge = productCard.querySelector('.selected-badge');
+                if (!badge) {
+                    badge = document.createElement('span');
+                    badge.className = 'badge bg-warning text-dark position-absolute top-0 start-0 m-2 selected-badge';
+                    badge.textContent = 'Выбрано';
+                    const discountBadge = productCard.querySelector('.badge.bg-danger');
+                    if (discountBadge) {
+                        badge.classList.remove('start-0');
+                        badge.classList.add('end-0');
+                    }
+                    
+                    productCard.appendChild(badge);
+                }
+                const button = productCard.querySelector('button');
+                button.classList.remove('btn-primary');
+                button.classList.add('btn-success');
+                button.innerHTML = '<i class="bi bi-check-circle me-2"></i>В корзине';
+                button.onclick = null;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Страница загружена. Ни один товар не выбран.');
+        });
     </script>
-    </body>
+</body>
 </html>
